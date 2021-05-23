@@ -1,0 +1,49 @@
+@font-face {
+    font-family: 'HachiMaru';
+    src: url(../fonts/HachiMaruPop-Regular.ttf);
+    font-display: swap;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.page {
+    font-family: "HachiMaru";
+}
+
+#wrongnumber {
+    display: none;
+}
+
+#correctnumber {
+    display: none;
+}
+
+#numberHelpBlock {
+    display: none;
+}
+
+input:invalid + #wrongnumber {
+    display: block;
+}
+
+input:invalid + #wrongnumber + #correctnumber + #numberHelpBlock {
+    display: block;
+}
+
+input:valid + #wrongnumber + #correctnumber {
+    display: block;
+    padding-bottom: 10px;
+}
+
+input:valid + #wrongnumber + #correctnumber + #numberHelpBlock {
+    display: none;
+}
+
+input:placeholder-shown + #wrongnumber + #correctnumber + #numberHelpBlock {
+    display: block;
+}
+
+input:placeholder-shown + #wrongnumber + #correctnumber {
+    display: none;
+}
+
